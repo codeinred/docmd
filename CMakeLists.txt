@@ -48,11 +48,21 @@ include(FetchContent)
 FetchContent_Declare(
     fmt
     GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+    GIT_TAG        master
 )
 FetchContent_MakeAvailable(fmt)
 
 target_link_libraries(${libname} INTERFACE fmt)
 
+# Add noam as a dependency
+FetchContent_Declare(
+    noam
+    GIT_REPOSITORY https://github.com/codeinred/noam.git
+    GIT_TAG        main
+)
+FetchContent_MakeAvailable(noam)
+
+target_link_libraries(${libname} INTERFACE noam)
 
 # Add every directory in the modules/ folder as a subdirectory
 if(EXISTS "${working_dir}/modules/")
