@@ -1,3 +1,7 @@
+#pragma once
+#include <fmt/core.h>
+#include <fmt/format.h>
+
 /**
  * @file md.hpp
  * @author Alecto Irene Perez (alecto@codeinred.io)
@@ -7,6 +11,5 @@
  * @copyright Copyright (c) 2021
  *
  */
-#pragma once
 
 namespace md {}
